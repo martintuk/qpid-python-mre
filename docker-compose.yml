@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+    activemq:
+        image: rmohr/activemq
+        volumes:
+            - ./amq_conf/activemq.xml:/opt/activemq/conf/activemq.xml
+            - ./amq_conf/jetty.xml:/opt/activemq/conf/jetty.xml
+        ports:
+            - 8162:8161
+            - 5673:5672
