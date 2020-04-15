@@ -5,7 +5,7 @@ Minimal Reproducible Example for the Qpid Python disconnection issue.
 
 ~~Also, in both cases, even though messages get successfully processed, they are not auto accepted.~~
 
-Disconnection is fixed now (see #fix)
+Disconnection is fixed now (see [fix](#fix))
 
 ## setup
 1. create env `$ pipenv --python 3.6`
