@@ -9,13 +9,14 @@ if __name__ == "__main__":
         # send 1 message
         send_message(
             url=BROKER_URL,
-            queue=QUEUE_NAME
+            queue=QUEUE_NAME,
+            body=1
         )
 
         # consume with 60" sleep
         Container(ExampleConsumer(
             broker_url=BROKER_URL,
-            queue=QUEUE_NAME,
+            amqp_queue_name=QUEUE_NAME,
             timeout=60)).run()
     except KeyboardInterrupt: pass
 
